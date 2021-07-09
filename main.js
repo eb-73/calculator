@@ -8,7 +8,7 @@ let s="";
 operator.innerHTML="AC";
 let flag=true;
 const calculate=function(btn){
-    let content=btn.innerHTML;
+     let content=btn.innerHTML;
     
     //add to calc display
     if(content==="1"||content==="2"||content==="3"||content==="4"||content==="5"||content==="6"||content==="7"||content==="8"||content==="9"||content==="0"||content===".")
@@ -61,7 +61,17 @@ const calculate=function(btn){
             flag=true;
         }
         break;
-        case "C":{  
+        case "C":{
+            let con="";
+        if(h.innerHTML!=" "){
+            con=h.innerHTML;
+            h.innerHTML=con.slice(0,(con.length)-1);
+            value=value.slice(0,(value.length)-1);
+             
+        }
+        }
+        break;
+        case "HST":{  
             if (flag){
                 history.map(x=>{ 
                     s=`${x.toString()}=${eval(x)}</br>`;
@@ -92,4 +102,3 @@ for (let btn of button){
         calculate(btn);
     });
 }
-
