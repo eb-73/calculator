@@ -86,11 +86,10 @@ const calculate=function(btn){
                     s=`${x.toString()}=${eval(x)}</br>`;
                     his.innerHTML+=s;
                 });
-                
+                h.innerHTML=" ";
+                value="";
                 flag1=false;
-            }
-          
-            
+            }      
         }
         break;
         default:
