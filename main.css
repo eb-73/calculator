@@ -78,7 +78,21 @@ div.plus{
     border-radius: 7px;
     
 }
-div.btn:not(.history){
+div.equal{
+    
+    text-align: center;
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3px;
+    user-select: none;
+    background: rgb(255, 166, 0);
+    box-shadow:  5px 5px 10px #d3d3d3,
+                 -5px -5px 10px #ffffff;
+    cursor: pointer;
+}
+div.num, div.opt , div.act {
     text-align: center;
     justify-self: center;
     display: flex;
@@ -98,6 +112,7 @@ div.opt{
     font-size: 20px;
     font-weight: 900;
 }
+
 div.act{
     font-size: 10px;
 }
@@ -105,7 +120,7 @@ div.num{
     font-size: 18px;
     font-weight: 900;
 }
-div.btn:hover{
+div.btn:hover:not(div.equal){
     background-color:rgba(255, 0, 0, 0.5) ;
 }
       

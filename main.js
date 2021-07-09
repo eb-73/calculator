@@ -48,12 +48,15 @@ const calculate=function(btn){
             h.innerHTML=" ";
         }
         break;
-        case "=":{
-            h.innerHTML=eval(value);
-            history.push(value);
-            operator.innerHTML="=";
-            flag2=true;
-        }
+        case "=":
+            // if for clear undefined with = first
+            if(value){
+                h.innerHTML=eval(value);
+                history.push(value);
+                operator.innerHTML="=";
+                flag2=true;
+            }
+        
         break;
         case "AC":{
             value="";
